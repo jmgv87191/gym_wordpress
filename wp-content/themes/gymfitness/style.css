@@ -88,6 +88,10 @@ img{
     height: auto;
 }
 
+.imagen-destacada{
+    margin-bottom: 3rem;
+}
+
 .contenedor{
     width: min( 95%, 120rem );
     margin: 0 auto;
@@ -97,11 +101,11 @@ img{
     text-align: center;
 }
 
-.texto-primary{
+.text-primary{
     color: var(--primario);
 }
 
-.texto-blanco{
+.text-blanco{
     color: var(--blanco);
 }
 

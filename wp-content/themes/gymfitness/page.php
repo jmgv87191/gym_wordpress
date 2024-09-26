@@ -1,43 +1,22 @@
-<!DOCTYPE html>
-<html  <?php  language_attributes(); ?> >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <?php wp_head() ?>
-</head>
-<body>
-    
+<?php
 
-<header class="header" >
-    <div class="contenedor barra-navegacion">
+    get_header();
 
-    <div class="logo">
-        <img src=" <?php echo get_template_directory_uri()?>/img/logo.svg" alt="logotipo">
-    </div>
+?>
 
-    <?php
-
-    $args = array(
-        'theme_location'=>'menu-principal',
-        'container' =>'nav',
-        'container_class' => 'menu-principal'
-    );
-
-        wp_nav_menu($args);
-    ?>
-
-    </div>
-
-</header>
-
-<main>
+<main class="contenedor seccion" >
 
     <?php
 
         while ( have_posts() ):the_post();
 
-        the_title();
+        the_title( '<h1 class="text-center text-primary" >','</h1>' );
+
+    if (has_post_thumbnail()) {
+        the_post_thumbnail('full', array( 'class' => 'imagen-destacada' ));
+    }
+
+
         the_content();
 
 
