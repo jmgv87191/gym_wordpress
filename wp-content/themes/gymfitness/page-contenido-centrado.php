@@ -6,7 +6,7 @@
 
 ?>
 
-<main class="contenedor seccion" >
+<main class="contenedor seccion contenido-centrado" >
 
     <?php
 
