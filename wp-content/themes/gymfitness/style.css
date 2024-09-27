@@ -141,7 +141,7 @@ hr{
 }
 
 .menu-principal{
-    display: none;
+    display: block;
 }
 
 @media (min-width: 768px) {
@@ -206,7 +206,14 @@ hr{
 }
 
 .contenido-footer{
-    padding: 4rem;
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .contenido-footer{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .footer .menu-principal a{
@@ -221,6 +228,18 @@ hr{
     display: none;
 }
 
-.footer .current_page_item{
-    border: none;
+
+
+.copyright{
+    text-align: center;
+    font-family: var(--fuente-heading);
+    font-size: 1.8rem;
+    margin: 2rem 0 0 0;
+}
+
+@media (min-width:768px) {
+    .copyright{
+        font-size: 2.4rem;
+        margin: 0;
+    }
 }
