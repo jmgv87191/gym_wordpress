@@ -211,8 +211,7 @@ hr{
 
 @media (min-width: 768px) {
     .contenido-footer{
-        display: flex;
-        justify-content: space-between;
+        display: flex;                                                                      
     }
 }
 
