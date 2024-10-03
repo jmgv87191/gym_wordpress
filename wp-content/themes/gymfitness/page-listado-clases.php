@@ -26,8 +26,14 @@
                         <a href="<?php the_permalink(); ?>  ">
                             <h3> <?php the_title(); ?> </h3>
                         </a>
-                    </div>
 
+                        <?php
+                            $hora_inicio = get_field('hora_inicio');
+                            $hora_fin = get_field('hora_fin');
+                        ?>
+
+                        <p>  <?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " . $hora_fin ?> </p>
+                    </div>
                 </li>
 
             <?php 
