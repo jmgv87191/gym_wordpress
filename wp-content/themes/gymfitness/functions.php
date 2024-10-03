@@ -25,5 +25,11 @@
 
     add_action('wp_enqueue_scripts','gymfitness_scripts_styles');
 
+    function gymfitness_widgets(){
+
+    }
+
+
+    add_action('widgets_init','gymfitness_widgets');
 
 ?>
