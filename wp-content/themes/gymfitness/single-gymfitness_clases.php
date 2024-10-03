@@ -15,9 +15,11 @@
 
         ?>
     </section>
-    <aside>
-        <h2>side bar </h2>
-    </aside>
+
+    <?php
+        get_sidebar('clases');
+    ?>
+
 
 </main>
 
