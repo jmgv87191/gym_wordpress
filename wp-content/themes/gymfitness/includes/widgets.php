@@ -13,7 +13,54 @@ class GymFitness_Clases_Widget extends WP_Widget {
 	}
 
 	public function widget( $args, $instance ) {
-        echo $instance['cantidad'];
+        ?>
+
+            <ul class="clases-sidebar" >
+                <?php
+                    $args = array(
+                        'post_type' => 'gymfitness_clases',
+                        'posts_per_page' => $instance['cantidad']
+                    );
+                    $clases = new WP_Query($args);
+
+                    while ($clases ->have_posts()) {
+                        $clases->the_post();
+
+                        ?>
+
+                            <li>
+
+                                <div class="imagen">
+                                    <?php the_post_thumbnail('medium'); ?>
+                                </div>
+
+                                    <div class="contenido_clase">
+                                        <a href="<?php the_permalink(); ?>  ">
+                                            <h3> <?php the_title(); ?> </h3>
+                                        </a>
+
+                                        <?php
+                                            $hora_inicio = get_field('hora_inicio');
+                                            $hora_fin = get_field('hora_fin');
+                                        ?>
+
+                                        <p>  <?php the_field('dias_clase'); ?> - <?php echo $hora_inicio . " a " . $hora_fin ?> </p>
+
+                                    </div>
+
+                            </li>
+
+                        <?php
+
+
+                    }
+
+                ?>
+            </ul>
+
+
+        <?php
+
 	}
 
     public function form( $instance ) {
