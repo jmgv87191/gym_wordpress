@@ -6,6 +6,12 @@
 ?>
 
 <main class="contenedor seccion" >
+
+
+    <?php
+        get_template_part('template-parts/pagina')
+    ?>
+
     <ul class="listado-grid" >
         <?php
             $args = array(
